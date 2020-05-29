@@ -52,3 +52,8 @@
 ;;
 ;; You can also try 'gd' (or 'C-c g d') to jump to their definition and see how
 ;; they are implemented.
+
+;; Load separate config files from another directory
+(add-load-path! "configmods")
+
+(mapc 'load-file (directory-files "./.doom.d/configmods" 1 "^.+\.el"))
